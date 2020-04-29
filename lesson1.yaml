@@ -1,0 +1,18 @@
+#
+# Copyleft (c) by Ivan D 2020
+#-------------------------------------------------------------
+apiVersion : v1
+kind: Pod
+metadata:
+  name: my-website
+  labels:
+    env  : prod
+    app  : main
+    tier : frontend
+    owner: Ivan_D
+spec:
+  containers:
+    - name : container-apache
+      image: nginx:latest
+      ports:
+        - containerPort: 80
